@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -15,8 +16,9 @@ public class MainActivity extends BaseActivity {
 
     ActivityMainBinding binding;
 
-    final  int REQ_FOR_NICKNAME = 1001;
+    final int REQ_FOR_NICKNAME = 1001;
     final int REQ_FOR_PHONE_NUM = 1002;
+    final int REQ_FOR_EMAIL = 1003;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,24 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        binding.dialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                전화걸기 등 안드로이드는 => uri 정보 요구.
+                Uri myUri = Uri.parse("tel:010-9433-9508");
+                Intent myIntent = new Intent(Intent.ACTION_DIAL, myUri);
+                startActivity(myIntent);
+            }
+        });
+
+        binding.editEmailBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(mContext, EditUserEmailActivity.class);
+                startActivityForResult(myIntent, REQ_FOR_EMAIL);
+            }
+        });
 
         binding.editPhoneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,19 +88,28 @@ public class MainActivity extends BaseActivity {
 
             }
 
-        }
-        else if (requestCode == REQ_FOR_PHONE_NUM) {
+        } else if (requestCode == REQ_FOR_PHONE_NUM) {
             if (resultCode == RESULT_OK) {
                 if (data != null) {
                     String phoneNum = data.getStringExtra("phone");
 
                     binding.userPhoneTxt.setText(phoneNum);
                 }
-            }
-            else {
+            } else {
                 Toast.makeText(mContext, "전화번호 변경을 취소했습니다.", Toast.LENGTH_SHORT).show();
+            }
+        } else if (requestCode == REQ_FOR_EMAIL) {
+            if (resultCode == RESULT_OK) {
+                if (data != null) {
+                    String email = data.getStringExtra("email");
+
+                    binding.userEmailTxt.setText(email);
+                }
+            } else {
+                Toast.makeText(mContext, "이메일 변경을 취소했습니다.", Toast.LENGTH_SHORT).show();
             }
         }
 
     }
+
 }
