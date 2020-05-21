@@ -31,6 +31,18 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        binding.webBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                웹 창 띄우기 (이동하기)
+                String naverLinkUrl = "http://naver.com";
+
+                Uri myUri = Uri.parse(naverLinkUrl);
+                Intent myInten = new Intent(Intent.ACTION_VIEW, myUri);
+                startActivity(myInten);
+            }
+        });
+
         binding.smsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +59,7 @@ public class MainActivity extends BaseActivity {
         binding.calBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                전화걸어보기
+//                전화걸어보기 (앱)죽음
                 String dialPhoneNum = binding.userPhoneTxt.getText().toString();
 
                 Uri myUri = Uri.parse(String.format("tel:%s", dialPhoneNum));

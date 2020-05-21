@@ -114,6 +114,13 @@
             android:layout_marginTop="5dp"
             android:text="문자 전송"/>
 
+        <Button
+            android:id="@+id/webBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="네이버로 바로가기"/>
+
 
         <TextView
             android:layout_width="wrap_content"
