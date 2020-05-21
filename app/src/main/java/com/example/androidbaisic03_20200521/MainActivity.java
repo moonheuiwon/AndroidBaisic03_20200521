@@ -31,6 +31,17 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        binding.calBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String dialPhoneNum = binding.userPhoneTxt.getText().toString();
+
+                Uri myUri = Uri.parse(String.format("tel:%s", dialPhoneNum));
+                Intent myIntent = new Intent(Intent.ACTION_CALL, myUri);
+                startActivity(myIntent);
+            }
+        });
+
         binding.dialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
