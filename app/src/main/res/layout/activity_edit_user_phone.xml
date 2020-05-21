@@ -17,7 +17,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="새 전화번호를 입력하세요"
+            android:hint="새 전화번호를 입력하세요."
             android:inputType="phone"/>
 
         <Button
