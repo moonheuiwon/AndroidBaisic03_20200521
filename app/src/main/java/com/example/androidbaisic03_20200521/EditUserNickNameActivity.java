@@ -3,7 +3,9 @@ package com.example.androidbaisic03_20200521;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.androidbaisic03_20200521.databinding.ActivityEditUserNickNameBinding;
 
@@ -21,6 +23,20 @@ public class EditUserNickNameActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        binding.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nickName = binding.nickNameEdt.getText().toString();
+
+                Intent myIntent = new Intent();
+                myIntent.putExtra("editNickName", nickName);
+
+                setResult(RESULT_OK, myIntent);
+
+                finish();
+            }
+        });
 
     }
 
