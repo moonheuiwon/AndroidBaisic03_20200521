@@ -35,7 +35,10 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 //                전화걸기 등 안드로이드는 => uri 정보 요구.
-                Uri myUri = Uri.parse("tel:010-9433-9508");
+
+                String dialPhoneNum = binding.userPhoneTxt.getText().toString();
+
+                Uri myUri = Uri.parse(String.format("tel:%s", dialPhoneNum));
                 Intent myIntent = new Intent(Intent.ACTION_DIAL, myUri);
                 startActivity(myIntent);
             }
