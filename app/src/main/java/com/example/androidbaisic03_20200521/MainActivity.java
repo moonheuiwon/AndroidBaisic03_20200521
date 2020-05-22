@@ -31,6 +31,17 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        binding.storeLinkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                플레이 스토어에서 원하는 앱의 링크 주소를 details 부터 복붙
+                Uri myUri = Uri.parse("market://details?id=com.kakao.talk");
+
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, myUri);
+                startActivity(myIntent);
+            }
+        });
+
         binding.webBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
