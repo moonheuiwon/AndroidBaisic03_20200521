@@ -9,161 +9,183 @@
         android:padding="15dp"
         tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아이디 : "/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:text="moonheuiwon95"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="닉네임 : "/>
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:layout_height="match_parent">
 
-
-            <TextView
-                android:id="@+id/userNickNameTxt"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="불광두식이"
-                android:textColor="#000000"
-                android:textSize="18sp" />
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 : "/>
 
-            <Button
-                android:id="@+id/editNickNameBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="수정하기"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="moonheuiwon95"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="닉네임 : "/>
 
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="전화번호 : "/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
 
-            <TextView
-                android:id="@+id/userPhoneTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N/A"
-                android:textColor="#000000"
-                android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/userNickNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="불광두식이"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/editPhoneBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="수정하기"/>
-
-            <Button
-                android:id="@+id/dialBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="전화걸기"/>
-
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/calBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="전화 걸기"/>
-
-        <Button
-            android:id="@+id/smsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="문자 전송"/>
-
-        <Button
-            android:id="@+id/webBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="네이버로 바로가기"/>
-
-        <Button
-            android:id="@+id/storeLinkBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="카카오톡 플레이 스토어로 가기"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="이메일 : "/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-
-            <TextView
-                android:id="@+id/userEmailTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="moonheuiwon95@naver.com"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/editEmailBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="수정하기"/>
+                    <Button
+                        android:id="@+id/editNickNameBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수정하기"/>
 
 
 
-        </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="전화번호 : "/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/userPhoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/editPhoneBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수정하기"/>
+
+                    <Button
+                        android:id="@+id/dialBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전화걸기"/>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/calBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="전화 걸기"/>
+
+                <Button
+                    android:id="@+id/smsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="문자 전송"/>
+
+
+                <Button
+                    android:id="@+id/webBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="네이버로 바로가기"/>
+
+                <Button
+                    android:id="@+id/storeLinkBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="카카오톡 플레이 스토어로 가기"/>
+
+
+                <Button
+                    android:id="@+id/Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text= "임시버튼"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="이메일 : "/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/userEmailTxt"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="moonheuiwon95@naver.com"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_weight="1" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/editEmailBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="수정하기"/>-->
+
+
+
+<!--        </LinearLayout>-->
 
 
 

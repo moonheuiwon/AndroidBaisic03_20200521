@@ -92,13 +92,13 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        binding.editEmailBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(mContext, EditUserEmailActivity.class);
-                startActivityForResult(myIntent, REQ_FOR_EMAIL);
-            }
-        });
+//        binding.editEmailBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent myIntent = new Intent(mContext, EditUserEmailActivity.class);
+//                startActivityForResult(myIntent, REQ_FOR_EMAIL);
+//            }
+//        });
 
         binding.editPhoneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
